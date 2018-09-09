@@ -1,0 +1,201 @@
+* {
+  box-sizing: border-box;
+}
+html,body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  position: relative;
+  font-family: Montserrat, cursive, sans-serif;
+}
+/*100% body's height minus 60px footer's height*/ 
+/* .main {
+  min-height: calc(100% - 60px);
+} */
+/*Carousel photos*/
+.carousel-item {
+  height: 100vh;
+  min-height: 300px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/*Welcome div-message and h1 css*/
+.Welcome { 
+  color:#fff;
+  position:absolute;
+  z-index:12;
+  top:50%;
+  left:0;
+  width:100%;
+  text-align:center;
+}
+.Welcome>h1{
+  background: rgba(50,50,50,0.4);
+  font-size: 3rem;
+  width:60%;
+  margin: 0 auto;
+}
+/*Footer*/
+footer {
+  padding: 21px;
+  text-align: center;
+  color:whitesmoke;
+  font-size: 18px;
+  background-color: rgb(63, 68, 63);
+  height: 60px;
+  width: 100%;
+}
+
+/*About Section*/
+#about>.container>.row>.col-lg-8>h2{
+  font-size: 3rem; margin-bottom: 20px;
+}
+#about>.container>.row>.col-lg-8>p{
+  margin-bottom: 20px;
+}
+/*About Section*/
+#about{
+  height: 100vh;
+}
+/*Services Section*/
+#services {
+  height: 100vh;
+  padding: 150px 0;
+  background-color:burlywood;
+}
+/*Store Section*/
+#store {
+  height: 100vh;
+  background-color:#92a8d1;
+}
+/*Search Section*/
+#search{
+  padding-bottom: 0;
+  min-height: calc(100% - 110px);
+  background-color:#9fa9a3;
+}
+/*General css for all sections*/
+section {
+  padding: 150px 0;
+  padding-top:30px;
+}
+/*The two buttons of the service section*/
+#servicesButton {
+  display: block;
+  text-decoration: none;  
+  margin: 40px auto;
+  color: black;
+  border-radius: 3px;
+  border: 1px solid black;
+  width:150px;
+  padding:10px;
+  font-weight: bold;
+  position:relative;
+  z-index: 1;
+}
+#servicesButton:after{
+  content: "";
+  position: absolute;
+  top:0;
+  left:0;
+  z-index: -1;
+  background:#618685;
+  width:100%;
+  height:100%;
+  transform: scaleY(0);
+  transform-origin: bottom left; 
+}
+#servicesButton:hover {
+  transition: all 0.5s;
+}
+#servicesButton:hover:after{
+  transform: scaleY(1);
+  transition: all 0.5s;
+  
+}
+/*Text fields*/
+input[type=text], select {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+/*Submit buttons*/
+input[type=submit] {
+  width: 30%;
+  background-color: #007bff;
+  border-color: #007bff;
+  color: white;
+  padding: 10px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: color .15s ease-in-out,
+  background-color .15s ease-in-out,
+  border-color .15s ease-in-out,
+  box-shadow .15s ease-in-out;
+}
+input[type=submit]:hover {
+  background-color: #034f84;
+}
+/*css for the searchForm*/ 
+#searchForm{
+  border-radius: 5px;
+  background-color: #eaece5;
+  padding: 20px;
+  margin: 0 auto;
+  width: 50vh;
+}
+/*css for the storeForm*/ 
+#storeForm {
+  border-radius: 5px;
+  background-color: rgba(255,255,255,0.4);
+  padding: 20px;
+  margin: 0 10%;
+}
+/*Label css at the store form*/
+label {
+  width: 70px;
+  height:50px;
+}
+/*Result item css*/
+.resultitem {
+  margin:20px auto;
+  width: 30vh;
+  background-color: wheat;
+  padding: 10px;
+  border-radius: 5px;
+  transition: transform .2s;
+}
+.resultitem:hover{
+  -ms-transform: scale(1.5); /* IE 9 */
+  -webkit-transform: scale(1); /* Safari 3-8 */
+  transform: scale(1.2);
+  border: 1px solid black;
+}
+/*Custom ScrollBar*/
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+    
+}
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+    
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888; 
+    border-radius: 10px;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
