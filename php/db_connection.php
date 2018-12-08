@@ -2,20 +2,20 @@
 <body>
 
 <?php
-    // foreach ($_SERVER as $key => $value) {
-	// 	if (strpos($key, "MYSQLCONNSTR_localdb") !== 0) {//obtaining info for connection
-	// 		continue;
-	// 	}
-	
-		$servername = '83.212.105.20';
-		$dbname = 'it21520';
-		$username = 'it21520';
-		$password = 'm%92m07h';
-	// }
-	$conn = mysqli_connect($servername, $username, $password,$dbname) or die (mysql_error());//connection to DB
-	// Check connection
-	if ($conn->connect_error) {//check connection
-		die("Connection failed: " . $conn->connect_error);
+    	//Database server IP
+	$host = '';
+	//Database name
+	$db_name = '';
+	//Database username
+	$username = '';
+	//Database password
+	$password = '';
+
+	//Establishes the connection
+	$conn = mysqli_init();
+	mysqli_real_connect($conn, $host, $username, $password, $db_name, 3306);
+	if (mysqli_connect_errno($conn)) {
+		die('Failed to connect to MySQL: '.mysqli_connect_error());
 	}
 ?>
 </body>
